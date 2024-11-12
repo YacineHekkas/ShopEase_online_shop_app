@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:shopease_ecom_app/data/const/constants.dart';
+import 'package:shopease_ecom_app/view/screens/landingPage/landing_page.dart';
 import 'package:shopease_ecom_app/view/screens/widgets/buttons/custom_text_button.dart';
 import 'package:shopease_ecom_app/view/screens/widgets/buttons/primary_button.dart';
 
 
 class AgreeTermsDialog extends StatelessWidget {
+
+  final storage = FlutterSecureStorage();
+
+
   final VoidCallback disagreeCallback;
   final VoidCallback agreeCallback;
-  const AgreeTermsDialog({
+   AgreeTermsDialog({
     required this.agreeCallback,
     required this.disagreeCallback,
     super.key,
@@ -39,7 +47,16 @@ class AgreeTermsDialog extends StatelessWidget {
               ),
               Expanded(
                 child: PrimaryButton(
-                  onTap: agreeCallback,
+                  onTap: () async {
+                    await storage.write(key: 'auth', value: "token");
+
+
+                    Get.offAll<Widget>(
+                          () => const LandingPage(),
+                      transition: Transition.rightToLeft, // Choose your preferred transition
+                      duration: const Duration(milliseconds: 500), // Customize duration if needed
+                    );
+                  },
                   text: 'Agree',
                   fontSize: 14.sp,
                   width: 115.w,

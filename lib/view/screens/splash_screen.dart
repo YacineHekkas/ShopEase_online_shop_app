@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:shopease_ecom_app/controller/auth_navigation.dart';
 import 'package:shopease_ecom_app/data/const/constants.dart';
-import 'package:shopease_ecom_app/view/screens/onboarding/onboarding_view.dart';
+
 
 
 class SplashView extends StatefulWidget {
@@ -17,8 +18,10 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 3), () {
-      Get.offAll<Widget>(() => const OnboardingView());
+    Future.delayed(const Duration(seconds: 3), () async {
+
+      await checkAuthStatus();
+      // Get.offAll<Widget>(() => const OnboardingView());
     });
   }
 

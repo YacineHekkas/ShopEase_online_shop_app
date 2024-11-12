@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get/get.dart';
 import 'package:shopease_ecom_app/view/screens/auth/components/agree_terms_text_card.dart';
 import 'package:shopease_ecom_app/view/screens/auth/components/auth_appbar.dart';
@@ -25,6 +26,10 @@ class SignInView extends StatefulWidget {
 }
 
 class _SignInViewState extends State<SignInView> {
+
+  final storage = FlutterSecureStorage();
+
+
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
@@ -105,8 +110,11 @@ class _SignInViewState extends State<SignInView> {
                 ),
                 SizedBox(height: AppSpacing.fifteenVertical),
                 PrimaryButton(
-                  onTap: () {
+                  onTap: () async {
                     if (_formKey.currentState!.validate()) {
+
+                      await storage.write(key: 'auth', value: "token");
+
                       Get.offAll<Widget>(
                             () => const LandingPage(),
                         transition: Transition.rightToLeft, // Choose your preferred transition
@@ -127,7 +135,9 @@ class _SignInViewState extends State<SignInView> {
                       TextSpan(
                         text: 'Sign Up',
                         recognizer: TapGestureRecognizer()
-                          ..onTap = () {
+                          ..onTap = () async {
+
+
                             Get.to<Widget>(() => const SignUpView());
                           },
                         style: AppTypography.kSemiBold16

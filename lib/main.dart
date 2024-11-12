@@ -8,7 +8,8 @@ import 'data/const/constants.dart';
 
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized(); // Add this line
+
   SystemChrome.setSystemUIOverlayStyle(defaultOverlay);
   await SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
@@ -30,7 +31,7 @@ class Main extends StatelessWidget {
             FocusManager.instance.primaryFocus?.unfocus();
           },
           child: GetMaterialApp(
-            title: 'Ngamar',
+            title: 'EaseShop',
             debugShowCheckedModeBanner: false,
             scrollBehavior: const ScrollBehavior().copyWith(overscroll: false),
             defaultTransition: Transition.fadeIn,
