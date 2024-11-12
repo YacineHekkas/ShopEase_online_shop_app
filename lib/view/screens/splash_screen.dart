@@ -29,31 +29,35 @@ class _SplashViewState extends State<SplashView> {
         height: Get.height,
         width: Get.width,
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(AppAssets.kSplashBG),
-            fit: BoxFit.cover,
-          ),
+
+          color: Colors.white
+
+          // color: AppColors.kPrimary
+
+          // image: DecorationImage(
+          //   image: AssetImage(AppAssets.kSplashBG),
+          //   fit: BoxFit.cover,
+          // ),
         ),
         child: Column(
           children: [
             const Spacer(),
             SvgPicture.asset(
               AppAssets.kShower,
-              height: 64.h,
-              width: 64.w,
+              height: 180.h,
+              width: 180.w,
             ),
-            SizedBox(height: AppSpacing.twentyVertical),
             Text(
               'ShopEase',
               style: AppTypography.kExtraBold40.copyWith(
-                color: Colors.white,
+                color: Colors.black,
               ),
             ),
             SizedBox(height: AppSpacing.tenVertical),
             Text(
-              'Your solution for easy shop',
+              'Your solution for better \n  shopping experience ',
               style: AppTypography.kMedium14.copyWith(
-                color: Colors.white,
+                color: Colors.black,
               ),
             ),
             const Spacer(),

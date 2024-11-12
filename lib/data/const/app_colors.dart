@@ -4,6 +4,7 @@ class AppColors {
   // Primary & Secondary.
   static const Color kPrimary = Color(0xFF0103ba);
   static const Color kSecondary = Color(0xFF110C1D);
+  static const Color kSecondaryPrimary = Color(0xFFf9333b);
   // Alerts.
   static const Color kSuccess = Color(0xFF7AC678);
   static const Color kError = Color(0xFFF9333b);
@@ -30,8 +31,8 @@ class AppColors {
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     colors: [
-      const Color(0xFF110C1D).withOpacity(0.0),
-      const Color(0xFF110C1D),
+      const Color(0x88110C1D).withOpacity(0.0),
+      const Color(0xC3110C1D),
     ],
   );
 }
