@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shopease_ecom_app/data/const/constants.dart';
 import 'package:shopease_ecom_app/models/onboarding.dart';
+import 'package:shopease_ecom_app/view/screens/auth/signin_view.dart';
 import 'package:shopease_ecom_app/view/screens/onboarding/components/custom_dots_indicator.dart';
 import 'package:shopease_ecom_app/view/screens/onboarding/components/onboarding_card.dart';
 import 'package:shopease_ecom_app/view/screens/widgets/buttons/primary_button.dart';
@@ -58,7 +59,11 @@ class _OnboardingViewState extends State<OnboardingView> {
               PrimaryButton(
                 onTap: () {
                   if (_currentIndex == onboardingList.length - 1) {
-                    // Get.offAll<Widget>(() => const WelcomeView());
+                    Get.to<Widget>(
+                          () => const SignInView(),
+                      transition: Transition.rightToLeft, // Choose your preferred transition
+                      duration: const Duration(milliseconds: 500), // Adjust duration as needed
+                    );
                   } else {
                     _pageController.nextPage(
                       duration: const Duration(milliseconds: 500),

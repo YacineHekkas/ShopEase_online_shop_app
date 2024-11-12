@@ -28,7 +28,6 @@ List<Onboarding> onboardingList = [
   Onboarding(
     bgImage: AppAssets.kOnboardingThird,
     title: "You deserve better experience , You deserve ShopEase",
-    info:
-        'Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id sem . ',
+    info:""
   ),
 ];
