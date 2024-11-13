@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:shopease_ecom_app/view/screens/auth/signin_view.dart';
 import 'package:shopease_ecom_app/view/screens/profil/components/fade_animation.dart';
 import 'package:shopease_ecom_app/view/screens/profil/components/setting_tile.dart';
+import 'package:shopease_ecom_app/view/screens/profil/languages_view.dart';
 import 'package:shopease_ecom_app/view/screens/profil/notification_settings_view.dart';
 import 'package:shopease_ecom_app/view/screens/widgets/buttons/custom_text_button.dart';
 
@@ -72,7 +73,7 @@ class ProfileView extends StatelessWidget {
                  Get.to<Widget>(
                          () => const NotificationSettingsView(),
                  transition: Transition.rightToLeft, // Choose your preferred transition
-                duration: const Duration(milliseconds: 500),); // Customize duration as needed
+                duration: const Duration(milliseconds: 300),); // Customize duration as needed
               },
               icon: AppAssets.kNotification,
               title: 'Notifications',
@@ -82,7 +83,10 @@ class ProfileView extends StatelessWidget {
             delay: 1,
             child: SettingTile(
               onTap: () {
-                   // Get.to<Widget>(() => const LanguagesView());
+                   Get.to<Widget>(() => const LanguagesView(),
+                     transition: Transition.rightToLeft,
+                     duration: const Duration(milliseconds: 300),
+                   );
               },
               icon: AppAssets.kWorld,
               title: 'Languages',
