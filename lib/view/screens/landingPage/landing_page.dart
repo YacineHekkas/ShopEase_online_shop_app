@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shopease_ecom_app/data/const/constants.dart';
 
+import '../profil/profile_view.dart';
 import 'components/centered_icon.dart';
 
 
@@ -19,7 +20,7 @@ class _LandingPageState extends State<LandingPage> {
     const Placeholder(),
     const Placeholder(),
     const Placeholder(),
-    const Placeholder(),
+    const ProfileView(),
   ];
   @override
   Widget build(BuildContext context) {
