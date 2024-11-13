@@ -12,6 +12,7 @@ import '../../../data/const/constants.dart';
 import '../../../models/user_model.dart';
 import '../widgets/dialogs/logout_dialog.dart';
 import 'components/profile_header_card.dart';
+import 'help_support_view.dart';
 
 
 class ProfileView extends StatelessWidget {
@@ -96,7 +97,10 @@ class ProfileView extends StatelessWidget {
             delay: 1,
             child: SettingTile(
               onTap: () {
-                // Get.to<Widget>(()=>const HelpSupportView());
+                Get.to<Widget>(()=>const HelpSupportView(),
+                  transition: Transition.rightToLeft,
+                  duration: const Duration(milliseconds: 300),
+                );
               },
               icon: AppAssets.kInfo,
               title: 'Help and Support',
