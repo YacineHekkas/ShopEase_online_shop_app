@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:shopease_ecom_app/view/screens/auth/signin_view.dart';
 import 'package:shopease_ecom_app/view/screens/profil/components/fade_animation.dart';
 import 'package:shopease_ecom_app/view/screens/profil/components/setting_tile.dart';
+import 'package:shopease_ecom_app/view/screens/profil/notification_settings_view.dart';
 import 'package:shopease_ecom_app/view/screens/widgets/buttons/custom_text_button.dart';
 
 import '../../../data/const/constants.dart';
@@ -68,7 +69,10 @@ class ProfileView extends StatelessWidget {
             delay: 1,
             child: SettingTile(
               onTap: () {
-                 // Get.to<Widget>(() => const NotificationSettingsView());
+                 Get.to<Widget>(
+                         () => const NotificationSettingsView(),
+                 transition: Transition.rightToLeft, // Choose your preferred transition
+                duration: const Duration(milliseconds: 500),); // Customize duration as needed
               },
               icon: AppAssets.kNotification,
               title: 'Notifications',
