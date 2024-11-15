@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shopease_ecom_app/data/const/constants.dart';
 import 'package:shopease_ecom_app/view/screens/favorite_screen.dart';
 import 'package:shopease_ecom_app/view/screens/home/home_view.dart';
+import 'package:shopease_ecom_app/view/screens/scan/product_scanner.dart';
 
 import '../profil/profile_view.dart';
 import 'components/centered_icon.dart';
@@ -20,7 +21,7 @@ class _LandingPageState extends State<LandingPage> {
   List<Widget> pages = [
     const HomeView(),
     const Placeholder(),
-    const Placeholder(),
+    const ProductScanner(),
     const FavoriteView(),
     const ProfileView(),
   ];
