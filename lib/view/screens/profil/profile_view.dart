@@ -13,6 +13,7 @@ import '../../../models/user_model.dart';
 import '../widgets/dialogs/logout_dialog.dart';
 import 'components/profile_header_card.dart';
 import 'help_support_view.dart';
+import 'your_card.dart';
 
 
 class ProfileView extends StatelessWidget {
@@ -51,22 +52,16 @@ class ProfileView extends StatelessWidget {
             delay: 1,
             child: SettingTile(
               onTap: () {
-                // Get.to<Widget>(() => const YourCard());
+                Get.to<Widget>(() => const YourCard(),
+                  transition: Transition.rightToLeft,
+                  duration: const Duration(milliseconds: 300),
+                );
               },
               icon: AppAssets.kWallet,
               title: 'Your Card',
             ),
           ),
-          FadeAnimation(
-            delay: 1,
-            child: SettingTile(
-              onTap: () {
-                // Get.to<Widget>(() => const SecurityView());
-              },
-              icon: AppAssets.kSecurity,
-              title: 'Security',
-            ),
-          ),
+
           FadeAnimation(
             delay: 1,
             child: SettingTile(

@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:shopease_ecom_app/data/const/constants.dart';
 import 'package:shopease_ecom_app/models/user_model.dart';
+import 'package:shopease_ecom_app/view/screens/profil/edit_profile.dart';
 
 
 class ProfileHeaderCard extends StatelessWidget {
@@ -37,8 +38,9 @@ class ProfileHeaderCard extends StatelessWidget {
         IconButton(
           icon: SvgPicture.asset(AppAssets.kEdit),
           onPressed: () {
-            //TODO :: add edite profile
-            //Get.to<Widget>(()=>const EditProfile());
+            Get.to<Widget>(()=>const EditProfile(),
+            transition: Transition.rightToLeft,
+            duration: const Duration(milliseconds: 300),);
           },
         ),
       ],
