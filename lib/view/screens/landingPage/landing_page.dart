@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shopease_ecom_app/data/const/constants.dart';
+import 'package:shopease_ecom_app/view/screens/home/home_view.dart';
 
 import '../profil/profile_view.dart';
 import 'components/centered_icon.dart';
@@ -16,7 +17,7 @@ class LandingPage extends StatefulWidget {
 class _LandingPageState extends State<LandingPage> {
   int _currentIndex = 0;
   List<Widget> pages = [
-    const Placeholder(),
+    const HomeView(),
     const Placeholder(),
     const Placeholder(),
     const Placeholder(),

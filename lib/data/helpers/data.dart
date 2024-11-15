@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopease_ecom_app/data/const/app_colors.dart';
+import 'package:shopease_ecom_app/models/product_model.dart';
 
 
 List<String> furnitureList = [
@@ -63,4 +64,4 @@ String dummyTextDescription =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget ornare quam vel facilisis feugiat amet sagittis arcu, tortor. Sapien, consequat ultrices morbi orci semper sit nulla. Leo auctor ut etiam est, amet aliquet ut vivamus. Odio vulputate est id tincidunt fames.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget ornare quam vel facilisis feugiat amet sagittis arcu, tortor. Sapien, consequat ultrices morbi orci semper sit nulla. Leo auctor ut etiam est, amet aliquet ut vivamus. Odio vulputate est id tincidunt fames.';
 
 //
-// List<ProductModel> favorite = [];
+List<ProductModel> favorite = [];

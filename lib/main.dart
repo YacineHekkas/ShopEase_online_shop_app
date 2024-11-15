@@ -2,14 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:shopease_ecom_app/controller/cart_controller.dart';
+import 'package:shopease_ecom_app/controller/favorite_controller.dart';
 import 'package:shopease_ecom_app/view/screens/splash_screen.dart';
 
 import 'data/const/constants.dart';
 
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized(); // Add this line
-
+  WidgetsFlutterBinding.ensureInitialized();
+  Get.put(FavoriteController());
+  Get.put(CartController());
   SystemChrome.setSystemUIOverlayStyle(defaultOverlay);
   await SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
