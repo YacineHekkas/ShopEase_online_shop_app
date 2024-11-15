@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:shopease_ecom_app/data/const/constants.dart';
+import 'package:shopease_ecom_app/view/screens/my_purchase/my_purchase_view.dart';
 import 'package:shopease_ecom_app/view/screens/widgets/buttons/custom_outlined_button.dart';
 import 'package:shopease_ecom_app/view/screens/widgets/buttons/primary_button.dart';
 
@@ -46,7 +47,7 @@ class PaymentSuccessDialog extends StatelessWidget {
               Expanded(
                 child: PrimaryButton(
                   onTap: () {
-                    // Get.to<Widget>(() => const MyPurchaseView());
+                    Get.to<Widget>(() => const MyPurchaseView());
                   },
                   width: 115.w,
                   borderRadius: 30.r,

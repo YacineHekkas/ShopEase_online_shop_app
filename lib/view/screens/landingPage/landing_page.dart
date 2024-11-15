@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shopease_ecom_app/data/const/constants.dart';
+import 'package:shopease_ecom_app/view/screens/favorite_screen.dart';
 import 'package:shopease_ecom_app/view/screens/home/home_view.dart';
 
 import '../profil/profile_view.dart';
@@ -20,7 +21,7 @@ class _LandingPageState extends State<LandingPage> {
     const HomeView(),
     const Placeholder(),
     const Placeholder(),
-    const Placeholder(),
+    const FavoriteView(),
     const ProfileView(),
   ];
   @override
