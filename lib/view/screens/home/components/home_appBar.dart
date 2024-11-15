@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:shopease_ecom_app/models/user_model.dart';
+import 'package:shopease_ecom_app/view/screens/checkout/cart_view.dart';
 import 'package:shopease_ecom_app/view/screens/profil/edit_profile.dart';
 import '../../../../data/const/constants.dart';
 
@@ -49,7 +50,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         CustomIcons(
           onTap: () {
-            // Get.to<Widget>(CartView.new);
+            Get.to<Widget>(CartView.new);
           },
           icon: AppAssets.kBag,
         ),

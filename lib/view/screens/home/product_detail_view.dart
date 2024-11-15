@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:shopease_ecom_app/controller/cart_controller.dart';
 import 'package:shopease_ecom_app/data/helpers/data.dart';
 import 'package:shopease_ecom_app/models/product_model.dart';
+import 'package:shopease_ecom_app/view/screens/checkout/cart_view.dart';
 import 'package:shopease_ecom_app/view/screens/home/components/color_card.dart';
 import 'package:shopease_ecom_app/view/screens/home/components/quantity_card.dart';
 import 'package:shopease_ecom_app/view/screens/widgets/buttons/primary_button.dart';
@@ -46,8 +47,7 @@ class _ProductDetailViewState extends State<ProductDetailView> {
         actions: [
           IconButton(
             onPressed: () {
-              //todo
-                // Get.to<Widget>(CartView.new);
+                Get.to<Widget>(CartView.new);
             },
             icon: SvgPicture.asset(
               AppAssets.kBag,
