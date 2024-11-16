@@ -38,7 +38,7 @@ Follow these steps to run the app locally:
 ## Screenshots
 ![1](https://github.com/user-attachments/assets/6f1ebdda-0247-4ef2-abd0-461c215edad4)
 ![2](https://github.com/user-attachments/assets/963d8e1e-b3c0-4cbc-8094-fdf92957ee91)
-https://github.com/user-attachments/assets/ac13916a-de05-4d99-88a4-83c435c1581e
+![WhiteGreenMobileMockupPhotoCollageBeautyFacebookPost-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/f4ec78f7-f383-45c6-851e-8b37ecb5b01b)
 
 
 ## Contributions
