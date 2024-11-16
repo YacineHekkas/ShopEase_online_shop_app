@@ -36,6 +36,8 @@ Follow these steps to run the app locally:
    ```
 
 ## Screenshots
+![1](https://github.com/user-attachments/assets/6f1ebdda-0247-4ef2-abd0-461c215edad4)
+![2](https://github.com/user-attachments/assets/b8bfbe9c-f639-45d0-b0dd-292a37cc2e20)
 
 ## Contributions
 Contributions are welcome! Please fork this repository, make your changes, and submit a pull request.
