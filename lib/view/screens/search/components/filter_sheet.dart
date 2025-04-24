@@ -47,7 +47,7 @@ class _FilterSheetState extends State<FilterSheet> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const CustomDivider(),
-          SizedBox(height: AppSpacing.twentyVertical),
+          // SizedBox(height: AppSpacing.twentyVertical),
           Row(
             children: [
               IconButton(
@@ -68,7 +68,7 @@ class _FilterSheetState extends State<FilterSheet> {
               ),
             ],
           ),
-          SizedBox(height: AppSpacing.thirtyVertical),
+          // SizedBox(height: AppSpacing.thirtyVertical),
           Text(
             'Categories',
             style: AppTypography.kSemiBold18,

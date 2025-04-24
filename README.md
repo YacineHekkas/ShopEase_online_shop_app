@@ -37,6 +37,9 @@ Follow these steps to run the app locally:
 
 ## Screenshots
 
+![App Demo](assets/imageslogin.gif)
+
+
 ## Contributions
 Contributions are welcome! Please fork this repository, make your changes, and submit a pull request.
 
